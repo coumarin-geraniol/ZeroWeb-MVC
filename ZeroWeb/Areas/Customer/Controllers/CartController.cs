@@ -202,7 +202,7 @@ namespace ZeroWeb.Areas.Customer.Controllers
             _unitOfWork.Save();
 
 
-            TempData["warning"] = "Product deleted successfully";
+            TempData["warning"] = "Ürün başarıyla sepetten silindi.";
 
             return RedirectToAction(nameof(Index));
         }

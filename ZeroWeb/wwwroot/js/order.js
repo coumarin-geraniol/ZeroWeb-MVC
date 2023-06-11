@@ -52,7 +52,7 @@ function loadDataTable() {
                 data: 'id',
                 "render": function (data) {
                     return `<div class="w-75 btn-group" role="group">
-                     <a href="/admin/order/details?orderId=${data}" class="btn btn-success mx-2 opacity-75"> <i class="bi bi-pencil-square"></i> Edit</a>                                    
+                     <a href="/admin/order/details?orderId=${data}" class="btn btn-success mx-2 opacity-75"> <i class="bi bi-pencil-square"></i> Güncelle</a>                                    
                     </div>`
                 },
                 "width": "30%"

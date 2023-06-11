@@ -19,7 +19,7 @@
                             </div>
                             <div class="pl-1">
                                 <p class="text-dark text-opacity-75 text-center mb-0">
-                                    List Price:
+                                    Adet Fiyat:
                                     <span class="text-decoration-line-through">
                                         @product.ListPrice.ToString("c")
                                     </span>
@@ -27,9 +27,9 @@
                             </div>
                             <div class="pl-1">
                                 <p class="text-dark text-opacity-75 text-center">
-                                    As low as:
+                                    En düşük fiyat:
                                     <span class="text-success">
-                                        @product.Price.ToString("c")
+                                        @product.Price50.ToString("c")
                                     </span>
                                 </p>
                             </div>
@@ -38,7 +38,7 @@
                             <a asp-action="Details"
                                asp-route-productId="@product.Id"
                                class="btn btn-dark bg-gradient border-0 form-control">
-                                Details
+                                İncele
                             </a>
                         </div>
                     </div>

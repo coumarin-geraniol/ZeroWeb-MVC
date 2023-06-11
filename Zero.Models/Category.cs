@@ -11,11 +11,11 @@ namespace Zero.Models
 
         [Required]
 
-        [DisplayName("Category Name")]
+        [DisplayName("Kategori Adı")]
         [MaxLength(30)]
         public string Name { get; set; }
 
-        [DisplayName("Display Order")]
+        [DisplayName("Görüntüleme Sırası")]
         [Range(1, 100, ErrorMessage = "Display Order must be between 1-100")]
         public int DisplayOrder { get; set; }
     }

@@ -75,9 +75,7 @@ namespace ZeroWeb.Areas.Customer.Controllers
                 HttpContext.Session.SetInt32(SD.SessionCart,
                     _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == userId).Count());
             }
-
-            TempData["success"] = "Cart updated successfully";
-
+            TempData["success"] = "Sepet başarıyla güncellendi.";
 
             return RedirectToAction(nameof(Index));
         }

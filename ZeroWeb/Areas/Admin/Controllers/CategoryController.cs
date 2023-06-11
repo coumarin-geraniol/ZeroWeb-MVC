@@ -44,7 +44,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
                 _unitOfWork.Category.Add(obj);
                 _unitOfWork.Save();
 
-                TempData["success"] = "Category created successfully";
+                TempData["success"] = "Kategori başarıyla oluşturuldu.";
                 return RedirectToAction("Index");
             }
 
@@ -71,7 +71,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
         {
             if (obj.Name == obj.DisplayOrder.ToString())
             {
-                ModelState.AddModelError("name", "The Display Order cannot exactly match the Name");
+                ModelState.AddModelError("name", "Görüntüleme Sırası, İsim ile tam olarak aynı olamaz.");
             }
 
             if (ModelState.IsValid)
@@ -79,7 +79,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
                 _unitOfWork.Category.Update(obj);
                 _unitOfWork.Save();
 
-                TempData["success"] = "Category updated successfully";
+                TempData["success"] = "Kategori başarıyla güncellendi.";
                 return RedirectToAction("Index");
             }
 
@@ -114,7 +114,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             _unitOfWork.Category.Remove(obj);
             _unitOfWork.Save();
 
-            TempData["success"] = "Category deleted successfully";
+            TempData["success"] = "Kategori başarıyla silindi.";
             return RedirectToAction("Index");
 
 

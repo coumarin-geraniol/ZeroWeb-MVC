@@ -29,10 +29,10 @@
                     <ul class="navbar-nav me-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Orders</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişleri Yönet</a>
                         </li>
 
                         @if (User.IsInRole(SD.Role_Admin))
@@ -40,11 +40,11 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a>
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Categories</a>
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Companies</a>
-                                    <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Manage Users</a>
-                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create User</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Product" asp-action="Index">Ürünler</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Kategoriler</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="Company" asp-action="Index">Şirketler</a>
+                                    <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Kullanıcıları Yönet</a>
+                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Kullanıcı Oluştur</a>
                                 </div>
                             </li>
                         }

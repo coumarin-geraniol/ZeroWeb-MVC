@@ -60,7 +60,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             _unitOfWork.OrderHeader.Update(orderHeaderFromDb);
             _unitOfWork.Save();
 
-            TempData["Success"] = "Order Details Updated Successfully.";
+            TempData["Success"] = "Sipariş Detayları Başarıyla Güncellendi.";
 
 
             return RedirectToAction(nameof(Details), new { orderId = orderHeaderFromDb.Id });
@@ -73,7 +73,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             _unitOfWork.OrderHeader.UpdateStatus(OrderVM.OrderHeader.Id, SD.StatusInProcess);
             _unitOfWork.Save();
 
-            TempData["Success"] = "Order Status is Processing Successfully.";
+            TempData["Success"] = "Sipariş Durumu Başarıyla İşleniyor olarak güncellendi.";
 
 
             return RedirectToAction(nameof(Details), new { orderId = OrderVM.OrderHeader.Id });
@@ -97,7 +97,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
 
             _unitOfWork.OrderHeader.Update(orderHeader);
             _unitOfWork.Save();
-            TempData["Success"] = "Order Status is Shipped Successfully.";
+            TempData["Success"] = "Sipariş Durumu Başarıyla Gönderildi olarak güncellendi.";
 
 
             return RedirectToAction(nameof(Details), new { orderId = OrderVM.OrderHeader.Id });
@@ -127,7 +127,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             }
 
             _unitOfWork.Save();
-            TempData["warning"] = "Order Status is Cancelled Successfully.";
+            TempData["warning"] = "Sipariş Durumu Başarıyla İptal Edildi olarak güncellendi.";
 
 
             return RedirectToAction(nameof(Details), new { orderId = OrderVM.OrderHeader.Id });

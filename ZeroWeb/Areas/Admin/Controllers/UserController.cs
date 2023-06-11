@@ -127,7 +127,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             var objFromDb = _unitOfWork.ApplicationUser.Get(u => u.Id == id);
             if (objFromDb == null)
             {
-                return Json(new { success = false, message = "Error while Locking/Unlocking" });
+                return Json(new { success = false, message = "Kilitleme/Açma işlemi sırasında hata oluştu" });
             }
 
             if (objFromDb.LockoutEnd != null && objFromDb.LockoutEnd > DateTime.Now)
@@ -143,7 +143,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             _unitOfWork.ApplicationUser.Update(objFromDb);
             _unitOfWork.Save();
 
-            return Json(new { success = true, message = "Operation Successful" });
+            return Json(new { success = true, message = "İşlem Başarılı" });
         }
 
         #endregion

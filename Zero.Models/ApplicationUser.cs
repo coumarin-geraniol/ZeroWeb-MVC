@@ -14,16 +14,26 @@ namespace Zero.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        
+
+        [DisplayName("Kullanıcı İsmi")]
         public string Name { get; set; }
 
+        [DisplayName("Cadde/Sokak Adresi")]
         public string? StreetAddress { get; set; }
+
+        [DisplayName("İl")]
         public string? State { get; set; }
+
+        [DisplayName("Şirket ID")]
         public int? CompanyId { get; set; }
+
         [ForeignKey("CompanyId")]
         [ValidateNever]
-        public Company? Company { get; set;}
+        [DisplayName("Şirket")]
+        public Company? Company { get; set; }
+
         [NotMapped]
+        [DisplayName("Rol")]
         public string Role { get; set; }
 
     }

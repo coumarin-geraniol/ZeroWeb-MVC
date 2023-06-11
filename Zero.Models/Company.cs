@@ -12,15 +12,18 @@ namespace Zero.Models
     {
         public int Id { get; set; }
         [Required]
-        [DisplayName("Full Name")]
+        [DisplayName("Adı Soyadı")]
         public string Name { get; set; }
 
-        [DisplayName("Street Address")]
+        [DisplayName("Cadde Adresi")]
         public string? StreetAddress { get; set; }
+
+        [DisplayName("İl")]
         public string? State { get; set; }
 
         [Phone]
-        [Display(Name = "Phone number")]
+        [Display(Name = "Telefon Numarası")]
         public string? PhoneNumber { get; set; }
+
     }
 }

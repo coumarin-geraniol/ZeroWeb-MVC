@@ -58,7 +58,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
                 }
                 _unitOfWork.Save();
 
-                TempData["success"] = "Company created successfully";
+                TempData["success"] = "Şirket başarıyla oluşturuldu.";
                 return RedirectToAction("Index");
             }
             else
@@ -85,7 +85,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             var productToBeDeleted = _unitOfWork.Company.Get(u => u.Id == id);
             if (productToBeDeleted == null)
             {
-                return Json(new { success = false, message = "Error while Deleting" });
+                return Json(new { success = false, message = "Silme işlemi sırasında hata oluştu" });
             }
 
           
@@ -93,7 +93,7 @@ namespace ZeroWeb.Areas.Admin.Controllers
             _unitOfWork.Company.Remove(productToBeDeleted);
             _unitOfWork.Save();
 
-            return Json(new { success = true, message = "Deleted Successful" });
+            return Json(new { success = true, message = "Başarıyla silindi" });
 
 
         }
